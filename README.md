@@ -49,7 +49,7 @@ Graph-based memory for long-running project conversations.
 
 `conversation → memory nodes → relationships → graph retrieval`
 
-**Stack:** Next.js, FastAPI, Claude API
+**Stack:** Next.js, FastAPI, Claude API, OpenRouter
 
 </td>
 </tr>
@@ -60,12 +60,12 @@ Graph-based memory for long-running project conversations.
 ## GitHub activity
 
 <p align="center">
-  <img width="49%" src="https://github-readme-stats.vercel.app/api?username=YOUR_USERNAME&show_icons=true&theme=github_dark&hide_border=true&count_private=true" />
-  <img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=YOUR_USERNAME&layout=compact&theme=github_dark&hide_border=true" />
+  <img width="49%" src="https://github-readme-stats.vercel.app/api?username=Tunasmelt&show_icons=true&theme=github_dark&hide_border=true&count_private=true" />
+  <img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Tunasmelt&layout=compact&theme=github_dark&hide_border=true" />
 </p>
 
 <p align="center">
-  <img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=YOUR_USERNAME&theme=github-dark&hide_border=true" />
+  <img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=Tunasmelt&theme=github-dark&hide_border=true" />
 </p>
 
 ---
@@ -85,7 +85,7 @@ Graph-based memory for long-running project conversations.
 | Project | Highlights |
 |---|---|
 | **Beatlab** | Browser-native beat maker with a lookahead scheduler, piano roll, and WAV export using `OfflineAudioContext`. |
-| **NOIR: Transit** | PS2-inspired browser FPS horror experiment using Three.js, procedural audio, Bayer dithering, and multiple endings. |
+| **NOIR** | PS2-inspired browser FPS horror experiment using Three.js, procedural audio, Bayer dithering, and multiple endings. |
 | **Antidote** | Playlist analysis and music discovery using Python, React Native, and recommendation logic. |
 | **Stakked** | Artist asset creator with backend catalogues and a recommendation engine. |
 
@@ -96,7 +96,7 @@ Graph-based memory for long-running project conversations.
 
 | Project | Highlights |
 |---|---|
-| **Liver Segmentation & Tumor Analysis** | U-Net family models for CT segmentation with evaluation using segmentation metrics. |
+| **Liver Segmentation & Tumor Analysis** | U-Net family models for CT segmentation, evaluated using segmentation metrics. |
 | **Cart Abandonment Analysis** | SQL/Python/Power BI analysis identifying a modeled recovery opportunity across high-intent abandoned sessions. |
 | **Carbon Emission Analysis** | End-to-end data analysis from raw CSVs to Power BI dashboards covering 142 countries. |
 
@@ -129,28 +129,9 @@ Graph-based memory for long-running project conversations.
 ## Contribution activity
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_USERNAME/output/github-contribution-grid-snake-dark.svg" alt="Contribution snake animation" width="100%" />
+  <img src="https://raw.githubusercontent.com/Tunasmelt/output/github-contribution-grid-snake-dark.svg" alt="Contribution snake animation" width="100%" />
 </p>
 
 ---
 
 <details>
-<summary><b>About this profile</b></summary>
-
-<br />
-
-This profile README is intentionally structured as an engineering portfolio rather than a badge wall.
-
-- Custom dark/light hero artwork.
-- Dynamic GitHub statistics.
-- Activity graph.
-- Automated contribution snake generated with GitHub Actions.
-- Project hierarchy focused on AI systems and backend engineering.
-
-</details>
-
----
-
-<p align="center">
-  <sub><code>build → break → measure → improve</code></sub>
-</p>
