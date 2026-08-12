@@ -129,9 +129,5 @@ Graph-based memory for long-running project conversations.
 ## Contribution activity
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Tunasmelt/output/github-contribution-grid-snake-dark.svg" alt="Contribution snake animation" width="100%" />
+  <img src="https://raw.githubusercontent.com/Tunasmelt/Tunasmelt/output/github-contribution-grid-snake-dark.svg" alt="Contribution snake animation" width="100%" />
 </p>
-
----
-
-<details>
