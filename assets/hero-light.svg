@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="280" viewBox="0 0 1200 280">
+<rect width="1200" height="280" fill="#ffffff"/>
+<line x1="80" y1="60" x2="1120" y2="60" stroke="#d0d7de"/>
+<line x1="80" y1="220" x2="1120" y2="220" stroke="#d0d7de"/>
+<text x="600" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="48" fill="#24292f" font-weight="700">IBAD SHAMSI</text>
+<text x="600" y="160" text-anchor="middle" font-family="monospace" font-size="22" fill="#0969da">BACKEND × AI SYSTEMS ENGINEER</text>
+<text x="600" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#57606a">Retrieval · Agents · Evaluation · Observability</text>
+</svg>
