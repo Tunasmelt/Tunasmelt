@@ -112,6 +112,8 @@ Graph-based memory for long-running project conversations.
 | **Docify** | Multimodal document RAG using Docling OCR, hybrid Voyage + BM25 retrieval fused with Reciprocal Rank Fusion, and citation verification back to source passages. |
 | **Reminisce** | Converts long project conversations into searchable connected memory nodes with graph retrieval across non-linear dependencies. |
 | **ForkedRap** | End-to-end AI content pipeline for scripting, image/video generation, rendering, and scheduling. |
+| **Cerebro** | Retrieval hub fusing code, docs, and incident reports with commit-hash provenance, so answers trace to what's true *now* rather than what a doc said six months ago. |
+| **Forklift Testing Tool** | VS Code extension generating unit tests and safe code fixes across TypeScript, Python, Java, and C#. Every AI-assisted change goes through a patch review workflow with validator gates before it touches a file — AI Assist is off by default, no telemetry. |
 
 ### Systems & experiments
 
@@ -121,6 +123,7 @@ Graph-based memory for long-running project conversations.
 | **NOIR** | PS2-inspired browser FPS horror experiment using Three.js, procedural audio, Bayer dithering, and multiple endings. |
 | **Antidote** | Playlist analysis and music discovery using Python, React Native, and recommendation logic. |
 | **Stakked** | Artist asset creator with backend catalogues and a recommendation engine. |
+| **OffDaWall** | Server-first music discovery and catalog app aggregating metadata across Spotify, MusicBrainz, Deezer, and Last.fm behind a unified model. |
 
 <details>
 <summary><b>Data & ML work</b></summary>
