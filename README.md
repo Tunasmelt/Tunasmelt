@@ -92,23 +92,13 @@ I build systems that do work on their own — then obsess over the engineering u
 
 ### `01 / DOCIFY`
 
-**Multimodal document intelligence & RAG**
+**Multi-tenant SaaS for document Q&A**
 
-```text
-OCR
- ↓
-Document parsing
- ↓
-Semantic + BM25 retrieval
- ↓
-RRF fusion
- ↓
-Citation verification
-```
+Three-tier OCR fallback, provider-partitioned RRF hybrid retrieval, SSE streaming responses.
 
 **Stack**
 
-`FastAPI` `Next.js` `PostgreSQL` `pgvector`
+`Next.js 14` `FastAPI` `Supabase` `Voyage AI` `Gemini`
 
 </td>
 
@@ -116,23 +106,13 @@ Citation verification
 
 ### `02 / REMINISCE`
 
-**Graph-based memory for long-running conversations**
+**AI context orchestration & idea synthesis**
 
-```text
-Conversation
- ↓
-Memory extraction
- ↓
-Connected nodes
- ↓
-Relationship graph
- ↓
-Graph retrieval
-```
+Injects project context into a project-management integration; context can be shared across a team.
 
 **Stack**
 
-`Next.js` `FastAPI` `Claude API` `OpenRouter`
+`Next.js 14` `SaaS`
 
 </td>
 </tr>
@@ -140,33 +120,46 @@ Graph retrieval
 <tr>
 <td width="50%" valign="top">
 
-### `03 / FORKEDRAP`
+### `03 / DRIFTER`
 
-**End-to-end AI content pipeline**
+**Proxy-based regression harness for MCP tool schemas**
 
-`script → generate → render → schedule`
+Catches breaking changes in MCP tool schemas before they ship. Published on PyPI.
 
 **Stack**
 
-`n8n` `Canva Connect API` `AI APIs`
+`Python` `PyPI` `MCP`
 
 </td>
 
 <td width="50%" valign="top">
 
-### `04 / NOIR`
+### `04 / STRUC.TXT`
 
-**PS2-inspired browser FPS experiment**
+**Structured notes from rough capture**
 
-`320×240` · Bayer dithering · procedural audio · multiple endings
+Turns spoken or pasted notes into structured records via LLM, pinned to a draggable corkboard. Custom templates, auto-tagging, action-item extraction, version history alongside the raw capture.
 
 **Stack**
 
-`Three.js` `React` `Web Audio`
+`LLM` `Corkboard UI`
 
 </td>
 </tr>
 </table>
+
+---
+
+## `// other builds`
+
+| Project | What it is |
+|---|---|
+| **BeatLab** | Browser-native beat maker on the Web Audio API. Sub-5ms scheduler drift, piano roll, swing and per-step velocity, WAV export via `OfflineAudioContext`, share-by-URL encoding. |
+| **NOIR: Transit** | First-person psychological horror game in the browser, PS2-era aesthetic. Procedural audio one-shots, zone-based ambient scheduling, headless pixel-measurement rig for render verification. |
+| **Manifest** | Note/story/novel sharing platform. Next.js 15 + Expo monorepo on Supabase, pure-TypeScript layout engine (86 tests), asset upload pipeline. |
+| **Cerebro 2.0** | Multimodal RAG app with a brain-graph visualization UI. FastAPI + Next.js 15 + Supabase, `halfvec(1024)` embeddings, sealed-file tier with client-side WebCrypto key derivation. |
+| **ForkedRap** | AI social media automation pipeline for hip-hop content. Fetch pipeline with a human review gate, schema-first mapping compiler emitting deterministic versioned artifacts with zero LLM calls on the happy path. Exposed as an MCP server. |
+| **Agent-OS** | Framework for structuring and controlling AI coding agents. Stack-agnostic config, tiered memory, gated phase pipeline (spec → design → plan → TDD → review → PR). |
 
 ---
 
@@ -196,9 +189,6 @@ Graph retrieval
 | **Liver Segmentation & Tumor Analysis** | U-Net family models for CT segmentation with segmentation-based evaluation. |
 | **Cart Abandonment Analysis** | SQL + Python + Power BI analysis of 5,000 sessions and modeled recovery opportunities. |
 | **Carbon Emission Analysis** | Raw CSV → analysis → Power BI dashboard across 142 countries. |
-| **Beatlab** | Browser-native music tooling with a lookahead scheduler, piano roll and `OfflineAudioContext` WAV export. |
-| **Antidote** | Playlist analysis, personality insights and recommendation logic. |
-| **Stakked** | Artist asset creation, catalogues and recommendation engine. |
 
 </details>
 
@@ -257,13 +247,3 @@ repeat
 </table>
 
 ---
-
-<div align="center">
-
-`Backend` · `AI Systems` · `Retrieval` · `Agents` · `MCP`
-
-<br>
-
-<sub>Designed as an engineering dashboard, not a badge wall.</sub>
-
-</div>
