@@ -67,12 +67,12 @@ I build systems that do work on their own — then obsess over the engineering u
 <tr>
 <td width="50%" valign="top">
 
-<img src="./profile/stats.svg" width="100%" alt="GitHub statistics">
+<img src="https://github-readme-stats.vercel.app/api?username=Tunasmelt&show_icons=true&theme=github_dark&hide_border=true" width="100%" alt="GitHub statistics">
 
 </td>
 <td width="50%" valign="top">
 
-<img src="./profile/top-langs.svg" width="100%" alt="Top languages">
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Tunasmelt&layout=compact&theme=github_dark&hide_border=true" width="100%" alt="Top languages">
 
 </td>
 </tr>
