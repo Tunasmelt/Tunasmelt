@@ -63,22 +63,7 @@ I build systems that do work on their own — then obsess over the engineering u
 
 <div align="center">
 
-<table>
-<tr>
-<td width="50%" valign="top">
-
-<img src="https://github-readme-stats.vercel.app/api?username=Tunasmelt&show_icons=true&theme=github_dark&hide_border=true" width="100%" alt="GitHub statistics">
-
-</td>
-<td width="50%" valign="top">
-
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Tunasmelt&layout=compact&theme=github_dark&hide_border=true" width="100%" alt="Top languages">
-
-</td>
-</tr>
-</table>
-
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=Tunasmelt&bg_color=0d1117&color=58a6ff&line=39d353&point=ffffff&area=true&area_color=1b5e20&hide_border=true" width="100%" alt="GitHub contribution activity graph">
+<img src="./profile/metrics.svg" width="100%" alt="GitHub metrics — stats, top languages, and contribution activity">
 
 </div>
 
@@ -210,7 +195,7 @@ Turns spoken or pasted notes into structured records via LLM, pinned to a dragga
 
 <table>
 <tr>
-<td width="50%" valign="top">
+<td width="34%" valign="top">
 
 ### `// now`
 
@@ -222,7 +207,7 @@ Turns spoken or pasted notes into structured records via LLM, pinned to a dragga
 
 </td>
 
-<td width="50%" valign="top">
+<td width="33%" valign="top">
 
 ### `// principles`
 
@@ -241,6 +226,17 @@ repeat
 ```
 
 **Reliable systems > impressive demos**
+
+</td>
+
+<td width="33%" valign="top">
+
+### `// fast facts`
+
+- 10+ shipped systems — OCR pipelines to browser FPS engines
+- MCP server running in production (ForkedRap)
+- Package published on PyPI (Drifter)
+- Self-hosted metrics — no third-party stats API
 
 </td>
 </tr>
