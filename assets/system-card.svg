@@ -1,0 +1,13 @@
+<svg width="560" height="320" viewBox="0 0 560 320" xmlns="http://www.w3.org/2000/svg">
+<rect x="1" y="1" width="558" height="318" rx="16" fill="#0d1117" stroke="#30363d"/>
+<text x="28" y="38" fill="#8b949e" font-family="monospace" font-size="12">ENGINEERING / CURRENT_STATE</text>
+<circle cx="520" cy="32" r="5" fill="#39d353"/>
+<g font-family="monospace" font-size="13">
+<text x="28" y="82" fill="#58a6ff">01</text><text x="65" y="82" fill="#f0f6fc">Retrieval systems</text><text x="420" y="82" fill="#39d353">ACTIVE</text>
+<text x="28" y="128" fill="#58a6ff">02</text><text x="65" y="128" fill="#f0f6fc">Agent orchestration</text><text x="420" y="128" fill="#39d353">ACTIVE</text>
+<text x="28" y="174" fill="#58a6ff">03</text><text x="65" y="174" fill="#f0f6fc">MCP tooling</text><text x="420" y="174" fill="#e3b341">EXPLORING</text>
+<text x="28" y="220" fill="#58a6ff">04</text><text x="65" y="220" fill="#f0f6fc">Voice agents</text><text x="420" y="220" fill="#e3b341">EXPLORING</text>
+</g>
+<path d="M28 260H532" stroke="#30363d"/>
+<text x="28" y="286" fill="#8b949e" font-family="monospace" font-size="11">failure modes → telemetry → evaluation → iteration</text>
+</svg>
