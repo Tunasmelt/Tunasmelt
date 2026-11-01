@@ -1,8 +1,8 @@
-"""Generate the profile's SVG assets (dark + light) and README.md.
+"""Generate the profile's theme-adaptive SVG assets and README.md.
 
 Run: python scripts/build_assets.py
 Edit DATA below, rerun, commit. The recent-repos block in README.md is
-preserved; telemetry SVGs come from build_telemetry.py (needs the API).
+preserved; the telemetry SVG comes from build_telemetry.py (needs the API).
 """
 import re
 from pathlib import Path
@@ -187,10 +187,31 @@ def svg(w, h, title, body):
             f'<title>{escape(title)}</title>{"".join(body)}</svg>\n')
 
 
-def write(name, theme, content):
-    path = ASSETS / theme / f"{name}.svg"
+def dark_overrides():
+    # Every light colour is unique, so attribute selectors can swap each one
+    # for its dark counterpart. CSS beats presentation attributes.
+    light, dark = THEMES["light"], THEMES["dark"]
+    pairs = {}
+    for key, value in light.items():
+        if isinstance(value, list):
+            pairs.update(zip(value, dark[key]))
+        else:
+            pairs[value] = dark[key]
+    rules = "".join(f'[fill="{l}"]{{fill:{d}}}[stroke="{l}"]{{stroke:{d}}}' for l, d in pairs.items())
+    return f"<style>@media (prefers-color-scheme: dark){{{rules}}}</style>"
+
+
+def write(name, render):
+    """Write one SVG that adapts to the embedding page's colour scheme.
+
+    An <img> SVG follows the page's color-scheme, which GitHub sets from the
+    viewer's theme, so one file serves both themes and can sit inside a link.
+    """
+    content = render(THEMES["light"])
+    end = content.index(">") + 1
+    path = ASSETS / f"{name}.svg"
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(content, encoding="utf-8", newline="\n")
+    path.write_text(content[:end] + dark_overrides() + content[end:], encoding="utf-8", newline="\n")
 
 
 # ---------------------------------------------------------------- pieces
@@ -378,21 +399,12 @@ def colophon(t):
 
 
 def pic(name, alt, width="100%", link=None):
-    # GitHub's renderer pulls <img> out of <a><picture>, so linked images
-    # use the #gh-*-mode-only fragments instead of <picture>.
-    if link:
-        return (f'<a href="{link}">'
-                f'<img src="assets/dark/{name}.svg#gh-dark-mode-only" alt="{attr(alt)}" width="{width}"/>'
-                f'<img src="assets/light/{name}.svg#gh-light-mode-only" alt="{attr(alt)}" width="{width}"/>'
-                '</a>')
-    return ('<picture><source media="(prefers-color-scheme: dark)" '
-            f'srcset="assets/dark/{name}.svg"/><img src="assets/light/{name}.svg" '
-            f'alt="{attr(alt)}" width="{width}"/></picture>')
+    img = f'<img src="assets/{name}.svg" alt="{attr(alt)}" width="{width}"/>'
+    return f'<a href="{link}">{img}</a>' if link else img
 
 
 def badge(label, url, logo):
-    # One neutral chip for both themes: camo-proxied images lose the
-    # theme fragments, and <a><picture> breaks the link.
+    # One neutral chip for both themes: shields.io images can't adapt.
     src = f"https://img.shields.io/badge/{label}-21262d?style=flat-square&logo={logo}&logoColor=e6edf3"
     return f'<a href="{url}"><img src="{src}" alt="{label}"/></a>'
 
@@ -454,17 +466,16 @@ def readme():
 
 
 def main():
-    for theme, t in THEMES.items():
-        write("header", theme, header(t))
-        write("about", theme, about(t))
-        write("fig-01", theme, fig01(t))
-        write("colophon", theme, colophon(t))
-        for key, (num, label, tag) in SECTIONS.items():
-            write(key, theme, section(t, num, label, tag))
-        for i, p in enumerate(FEATURED, 1):
-            write("card-" + p["slug"], theme, card(t, i, p))
-        for n, (name, url, meta, desc) in enumerate(INDEX, len(FEATURED) + 1):
-            write(index_slug(name), theme, index_row(t, f"{n:02d}", name, url, meta, desc))
+    write("header", header)
+    write("about", about)
+    write("fig-01", fig01)
+    write("colophon", colophon)
+    for key, (num, label, tag) in SECTIONS.items():
+        write(key, lambda t, a=(num, label, tag): section(t, *a))
+    for i, p in enumerate(FEATURED, 1):
+        write("card-" + p["slug"], lambda t, i=i, p=p: card(t, i, p))
+    for n, row in enumerate(INDEX, len(FEATURED) + 1):
+        write(index_slug(row[0]), lambda t, n=n, row=row: index_row(t, f"{n:02d}", *row))
     readme()
 
 

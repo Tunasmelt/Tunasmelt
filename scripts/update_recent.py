@@ -1,11 +1,11 @@
-"""Rebuild the recently-shipped rows: assets/{dark,light}/recent-N.svg plus
+"""Rebuild the recently-shipped rows: assets/recent-N.svg plus
 the block between the recent markers in README.md. Needs gh and GH_TOKEN."""
 import json
 import os
 import re
 import subprocess
 
-from build_assets import ROOT, THEMES, index_row, pic, write
+from build_assets import ROOT, index_row, pic, write
 
 USER = os.environ.get("PROFILE_USER", "Tunasmelt")
 LIMIT = 6
@@ -29,8 +29,7 @@ def main():
         desc = re.split(r"(?<=[a-z0-9)])\. ", (r["description"] or "").strip())[0] or "—"
         lead = r["pushed_at"][5:10].replace("-", ".")
         meta = (r["language"] or "").upper()
-        for theme, t in THEMES.items():
-            write(f"recent-{i}", theme, index_row(t, lead, r["name"], r["html_url"], meta, desc))
+        write(f"recent-{i}", lambda t: index_row(t, lead, r["name"], r["html_url"], meta, desc))
         lines.append(pic(f"recent-{i}", f"{r['name']}: {desc}", link=r["html_url"]))
 
     path = ROOT / "README.md"

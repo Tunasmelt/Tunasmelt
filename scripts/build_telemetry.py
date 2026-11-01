@@ -1,4 +1,4 @@
-"""Build assets/{dark,light}/telemetry.svg from live GitHub data.
+"""Build assets/telemetry.svg from live GitHub data.
 
 Needs the gh CLI and GH_TOKEN. Run: python scripts/build_telemetry.py
 """
@@ -7,7 +7,7 @@ import json
 import os
 import subprocess
 
-from build_assets import SANS, THEMES, W, hline, svg, text, vline, width_of, write
+from build_assets import SANS, W, hline, svg, text, vline, width_of, write
 
 USER = os.environ.get("PROFILE_USER", "Tunasmelt")
 TOP = 6
@@ -82,8 +82,7 @@ def render(t, d):
 
 def main():
     data = collect()
-    for theme, t in THEMES.items():
-        write("telemetry", theme, render(t, data))
+    write("telemetry", lambda t: render(t, data))
 
 
 if __name__ == "__main__":
