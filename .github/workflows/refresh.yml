@@ -1,4 +1,4 @@
-name: Update recent repos
+name: Refresh profile data
 
 on:
   schedule:
@@ -12,12 +12,14 @@ concurrency:
   group: profile-commits
 
 jobs:
-  recent:
+  refresh:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Refresh recent repos block
-        run: python3 scripts/update_recent.py
+      - name: Rebuild recent repos block and telemetry figure
+        run: |
+          python3 scripts/update_recent.py
+          python3 scripts/build_telemetry.py
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PROFILE_USER: ${{ github.repository_owner }}
@@ -25,8 +27,8 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md
+          git add README.md assets
           git diff --cached --quiet && exit 0
-          git commit -m "chore: update recent repos"
+          git commit -m "chore: refresh profile data"
           git pull --rebase
           git push

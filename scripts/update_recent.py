@@ -1,9 +1,11 @@
-"""Rewrite the block between the recent markers in README.md with the
-most recently pushed public repos. Needs the gh CLI and GH_TOKEN."""
+"""Rebuild the recently-shipped rows: assets/{dark,light}/recent-N.svg plus
+the block between the recent markers in README.md. Needs gh and GH_TOKEN."""
 import json
 import os
 import re
 import subprocess
+
+from build_assets import ROOT, THEMES, index_row, pic, write
 
 USER = os.environ.get("PROFILE_USER", "Tunasmelt")
 LIMIT = 6
@@ -21,22 +23,22 @@ def repos():
         yield r
 
 
-def line(r):
-    bits = [f"[**{r['name']}**]({r['html_url']})"]
-    if r["description"]:
-        desc = re.split(r"(?<=[a-z0-9)])\. ", r["description"].strip())[0]
-        bits.append(desc if len(desc) <= 100 else desc[:97].rstrip() + "...")
-    meta = " · ".join(x for x in (r["language"], r["pushed_at"][:10]) if x)
-    return f"- {' — '.join(bits)}  \n  <sub>{meta}</sub>"
-
-
 def main():
-    block = "\n".join(line(r) for _, r in zip(range(LIMIT), repos()))
-    text = open("README.md", encoding="utf-8").read()
-    pattern = re.compile(re.escape(START) + r".*?" + re.escape(END), re.S)
-    new = pattern.sub(lambda _: f"{START}\n{block}\n{END}", text)
+    lines = []
+    for i, r in zip(range(1, LIMIT + 1), repos()):
+        desc = re.split(r"(?<=[a-z0-9)])\. ", (r["description"] or "").strip())[0] or "—"
+        lead = r["pushed_at"][5:10].replace("-", ".")
+        meta = (r["language"] or "").upper()
+        for theme, t in THEMES.items():
+            write(f"recent-{i}", theme, index_row(t, lead, r["name"], r["html_url"], meta, desc))
+        lines.append(pic(f"recent-{i}", f"{r['name']}: {desc}", link=r["html_url"]))
+
+    path = ROOT / "README.md"
+    text = path.read_text(encoding="utf-8")
+    block = f"{START}\n" + "\n".join(lines) + f"\n{END}"
+    new = re.sub(re.escape(START) + r".*?" + re.escape(END), lambda _: block, text, flags=re.S)
     if new != text:
-        open("README.md", "w", encoding="utf-8", newline="\n").write(new)
+        path.write_text(new, encoding="utf-8", newline="\n")
 
 
 if __name__ == "__main__":
