@@ -41,19 +41,18 @@
 <a href="https://github.com/Tunasmelt/Noir-Transit"><img src="assets/idx-noir-transit.svg" alt="NOIR: Transit: PS2-era first-person horror in the browser with fully procedural audio and two endings." width="100%"/></a>
 
 <details>
-<summary><sub>DATA &amp; ML ARCHIVE</sub></summary>
+<summary><samp>DATA &amp; ML ARCHIVE · 3 EARLIER PROJECTS</samp></summary>
+<br>
 
-| Project | What it demonstrates |
-|---|---|
-| **Liver Segmentation & Tumor Analysis** | U-Net family models for CT segmentation with segmentation-based evaluation. |
-| **Cart Abandonment Analysis** | SQL + Python + Power BI analysis of 5,000 sessions and modeled recovery opportunities. |
-| **Carbon Emission Analysis** | Raw CSV → analysis → Power BI dashboard across 142 countries. |
+<img src="assets/idx-liver-segmentation.svg" alt="Liver Segmentation: U-Net family models for CT liver and tumour segmentation, with segmentation-based evaluation." width="100%"/>
+<a href="https://github.com/Tunasmelt/Cart-Abandonment-Analysis"><img src="assets/idx-cart-abandonment.svg" alt="Cart Abandonment: SQL + Python + Power BI analysis of 5,000 sessions and modelled recovery opportunities." width="100%"/></a>
+<a href="https://github.com/Tunasmelt/Carbon-Emisisions-Analysis"><img src="assets/idx-carbon-emissions.svg" alt="Carbon Emissions: Raw CSV → analysis → Power BI dashboard covering emissions across 142 countries." width="100%"/></a>
 
 </details>
 
 <img src="assets/s05.svg" alt="05 — Recently Shipped" width="100%"/>
 
-<sub>Auto-updated daily from my most recently pushed public repos.</sub>
+<sub><samp>AUTO-UPDATED DAILY FROM MY MOST RECENTLY PUSHED PUBLIC REPOS</samp></sub>
 
 <!-- recent:start -->
 <a href="https://github.com/Tunasmelt/Drifter-MCP"><img src="assets/recent-1.svg" alt="Drifter-MCP: A proxy-based regression-testing harness that sits on the MCP connection between your agent and its tools" width="100%"/></a>

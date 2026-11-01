@@ -111,6 +111,15 @@ INDEX = [
      "PS2-era first-person horror in the browser with fully procedural audio and two endings."),
 ]
 
+ARCHIVE = [
+    ("Liver Segmentation", None, "PYTORCH · U-NET",
+     "U-Net family models for CT liver and tumour segmentation, with segmentation-based evaluation."),
+    ("Cart Abandonment", "https://github.com/Tunasmelt/Cart-Abandonment-Analysis", "SQL · POWER BI",
+     "SQL + Python + Power BI analysis of 5,000 sessions and modelled recovery opportunities."),
+    ("Carbon Emissions", "https://github.com/Tunasmelt/Carbon-Emisisions-Analysis", "PYTHON · POWER BI",
+     "Raw CSV → analysis → Power BI dashboard covering emissions across 142 countries."),
+]
+
 SECTIONS = {
     "s01": ("01", "WHOAMI", "~/about"),
     "s02": ("02", "SYSTEM MAP", "~/fig-01"),
@@ -430,6 +439,7 @@ def readme():
         cards.append('<p align="center">\n' + "\n".join(pair) + "\n</p>")
 
     rows = [pic(index_slug(name), f"{name}: {desc}", link=url) for name, url, _, desc in INDEX]
+    archive = [pic(index_slug(name), f"{name}: {desc}", link=url) for name, url, _, desc in ARCHIVE]
 
     snake = "https://raw.githubusercontent.com/Tunasmelt/Tunasmelt/output"
     parts = [
@@ -445,14 +455,10 @@ def readme():
         sec("s02"), "", pic("fig-01", "Figure 1: systems by layer"), "",
         sec("s03"), "", "\n\n".join(cards), "",
         sec("s04"), "", "\n".join(rows), "",
-        "<details>\n<summary><sub>DATA &amp; ML ARCHIVE</sub></summary>\n\n"
-        "| Project | What it demonstrates |\n|---|---|\n"
-        "| **Liver Segmentation & Tumor Analysis** | U-Net family models for CT segmentation with segmentation-based evaluation. |\n"
-        "| **Cart Abandonment Analysis** | SQL + Python + Power BI analysis of 5,000 sessions and modeled recovery opportunities. |\n"
-        "| **Carbon Emission Analysis** | Raw CSV → analysis → Power BI dashboard across 142 countries. |\n"
-        "\n</details>",
+        f"<details>\n<summary><samp>DATA &amp; ML ARCHIVE · {len(ARCHIVE)} EARLIER PROJECTS</samp></summary>\n<br>\n\n"
+        + "\n".join(archive) + "\n\n</details>",
         "",
-        sec("s05"), "", "<sub>Auto-updated daily from my most recently pushed public repos.</sub>", "",
+        sec("s05"), "", "<sub><samp>AUTO-UPDATED DAILY FROM MY MOST RECENTLY PUSHED PUBLIC REPOS</samp></sub>", "",
         recent, "",
         sec("s06"), "", pic("telemetry", "Figure 2: language composition and repository counts"), "",
         '<picture><source media="(prefers-color-scheme: dark)" '
@@ -476,6 +482,8 @@ def main():
         write("card-" + p["slug"], lambda t, i=i, p=p: card(t, i, p))
     for n, row in enumerate(INDEX, len(FEATURED) + 1):
         write(index_slug(row[0]), lambda t, n=n, row=row: index_row(t, f"{n:02d}", *row))
+    for n, row in enumerate(ARCHIVE, 1):
+        write(index_slug(row[0]), lambda t, n=n, row=row: index_row(t, f"A{n}", *row))
     readme()
 
 
