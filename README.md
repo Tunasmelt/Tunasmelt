@@ -75,7 +75,7 @@ I build systems that do work on their own — then obsess over the engineering u
 <tr>
 <td width="50%" valign="top">
 
-### `01 / DOCIFY`
+### `01 /` [`DOCIFY`](https://github.com/Tunasmelt/Docify)
 
 **Multi-tenant SaaS for document Q&A**
 
@@ -89,7 +89,7 @@ Three-tier OCR fallback, provider-partitioned RRF hybrid retrieval, SSE streamin
 
 <td width="50%" valign="top">
 
-### `02 / REMINISCE`
+### `02 /` [`REMINISCE`](https://github.com/Tunasmelt/Reminisce)
 
 **AI context orchestration & idea synthesis**
 
@@ -105,11 +105,11 @@ Injects project context into a project-management integration; context can be sh
 <tr>
 <td width="50%" valign="top">
 
-### `03 / DRIFTER`
+### `03 /` [`DRIFTER`](https://github.com/Tunasmelt/Drifter-MCP)
 
 **Proxy-based regression harness for MCP tool schemas**
 
-Catches breaking changes in MCP tool schemas before they ship. Published on PyPI.
+Sits on the MCP connection to record real tool-use trajectories, then mutates and replays the tool interface offline. Recording is solid; mutation and replay are experimental. [On PyPI](https://pypi.org/project/mcp-drifter/).
 
 **Stack**
 
@@ -119,7 +119,7 @@ Catches breaking changes in MCP tool schemas before they ship. Published on PyPI
 
 <td width="50%" valign="top">
 
-### `04 / STRUC.TXT`
+### `04 /` [`STRUC.TXT`](https://github.com/Tunasmelt/Struc.txt)
 
 **Structured notes from rough capture**
 
@@ -139,12 +139,14 @@ Turns spoken or pasted notes into structured records via LLM, pinned to a dragga
 
 | Project | What it is |
 |---|---|
-| **BeatLab** | Browser-native beat maker on the Web Audio API. Sub-5ms scheduler drift, piano roll, swing and per-step velocity, WAV export via `OfflineAudioContext`, share-by-URL encoding. |
-| **NOIR: Transit** | First-person psychological horror game in the browser, PS2-era aesthetic. Procedural audio one-shots, zone-based ambient scheduling, headless pixel-measurement rig for render verification. |
-| **Manifest** | Note/story/novel sharing platform. Next.js 15 + Expo monorepo on Supabase, pure-TypeScript layout engine (86 tests), asset upload pipeline. |
-| **Cerebro 2.0** | Multimodal RAG app with a brain-graph visualization UI. FastAPI + Next.js 15 + Supabase, `halfvec(1024)` embeddings, sealed-file tier with client-side WebCrypto key derivation. |
-| **ForkedRap** | AI social media automation pipeline for hip-hop content. Fetch pipeline with a human review gate, schema-first mapping compiler emitting deterministic versioned artifacts with zero LLM calls on the happy path. Exposed as an MCP server. |
-| **Agent-OS** | Framework for structuring and controlling AI coding agents. Stack-agnostic config, tiered memory, gated phase pipeline (spec → design → plan → TDD → review → PR). |
+| [**TrustWright**](https://github.com/Tunasmelt/TrustWright) | Local, open-source stdio MCP server for evidence-scoped authentication assessment. Assesses source and returns an implementation recipe; never claims a project is secure. |
+| [**Cachify**](https://github.com/Tunasmelt/Cachify) | Prompt cache gateway (`pcg`) for diagnosing cache busts and serving safe semantic cache hits. Python 3.12, `uv`, CI-gated with ruff, mypy and pytest. |
+| [**BeatLab**](https://github.com/Tunasmelt/BeatLab) | Browser-native beat maker on the Web Audio API. Sub-5ms scheduler drift, piano roll, swing and per-step velocity, WAV export via `OfflineAudioContext`, share-by-URL encoding. |
+| [**NOIR: Transit**](https://github.com/Tunasmelt/Noir-Transit) | First-person psychological horror game in the browser, PS2-era aesthetic. Procedural audio one-shots, zone-based ambient scheduling, headless pixel-measurement rig for render verification. |
+| [**Manifest**](https://github.com/Tunasmelt/Manifest-v2) | Note/story/novel sharing platform. Next.js 15 + Expo monorepo on Supabase, pure-TypeScript layout engine (86 tests), asset upload pipeline. |
+| [**Cerebro 2.0**](https://github.com/Tunasmelt/Cerebro-2.0) | Multimodal RAG app with a brain-graph visualization UI. FastAPI + Next.js 15 + Supabase, `halfvec(1024)` embeddings, sealed-file tier with client-side WebCrypto key derivation. Has a [Flutter mobile client](https://github.com/Tunasmelt/Cerebro-Flutter). |
+| **ForkedRap** *(private)* | AI social media automation pipeline for hip-hop content. Fetch pipeline with a human review gate, schema-first mapping compiler emitting deterministic versioned artifacts with zero LLM calls on the happy path. Exposed as an MCP server. |
+| [**Agent-OS**](https://github.com/Tunasmelt/Agent-OS) | Framework for structuring and controlling AI coding agents. Stack-agnostic config, tiered memory, gated phase pipeline (spec → design → plan → TDD → review → PR). |
 
 ---
 
@@ -152,11 +154,7 @@ Turns spoken or pasted notes into structured records via LLM, pinned to a dragga
 
 <div align="center">
 
-<img src="https://skillicons.dev/icons?i=ts,python,nextjs,fastapi,nestjs,postgresql,docker,graphql,rust,go&perline=10" alt="TypeScript Python Next.js FastAPI NestJS PostgreSQL Docker GraphQL Rust Go">
-
-<br><br>
-
-<img src="https://skillicons.dev/icons?i=pytorch,supabase,react,threejs,github,git&perline=10" alt="PyTorch Supabase React Three.js GitHub Git">
+<img src="https://skillicons.dev/icons?i=ts,python,nextjs,fastapi,postgresql,docker,supabase,react,flutter,pytorch&perline=10" alt="TypeScript Python Next.js FastAPI PostgreSQL Docker Supabase React Flutter PyTorch">
 
 </div>
 
@@ -195,19 +193,7 @@ Turns spoken or pasted notes into structured records via LLM, pinned to a dragga
 
 <table>
 <tr>
-<td width="34%" valign="top">
-
-### `// now`
-
-- Building deeper MCP tooling
-- Exploring agent evaluation patterns
-- Working with graph-based retrieval
-- Expanding backend architecture skills
-- Experimenting with voice-agent systems
-
-</td>
-
-<td width="33%" valign="top">
+<td width="50%" valign="top">
 
 ### `// principles`
 
@@ -229,17 +215,15 @@ repeat
 
 </td>
 
-<td width="33%" valign="top">
+<td width="50%" valign="top">
 
 ### `// fast facts`
 
-- 10+ shipped systems — OCR pipelines to browser FPS engines
-- MCP server running in production (ForkedRap)
-- Package published on PyPI (Drifter)
-- Self-hosted metrics — no third-party stats API
+- 15+ public repos — OCR pipelines to browser games
+- Two MCP servers: TrustWright (open source) and ForkedRap (private)
+- [`mcp-drifter`](https://pypi.org/project/mcp-drifter/) published on PyPI
+- Profile metrics generated by my own GitHub Actions workflow
 
 </td>
 </tr>
 </table>
-
----
