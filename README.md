@@ -55,9 +55,9 @@
 <sub><samp>AUTO-UPDATED DAILY FROM MY MOST RECENTLY PUSHED PUBLIC REPOS</samp></sub>
 
 <!-- recent:start -->
-<a href="https://github.com/Tunasmelt/Drifter-MCP"><img src="assets/recent-1.svg" alt="Drifter-MCP: A proxy-based regression-testing harness that sits on the MCP connection between your agent and its tools" width="100%"/></a>
-<a href="https://github.com/Tunasmelt/Unstale"><img src="assets/recent-2.svg" alt="Unstale: —" width="100%"/></a>
-<a href="https://github.com/Tunasmelt/Cachify"><img src="assets/recent-3.svg" alt="Cachify: Prompt cache gateway: explains why LLM provider prompt caching missed (byte-exact segment hashing, lineage, first-divergence diff) and, soon, serves safe semantic cache hits" width="100%"/></a>
+<a href="https://github.com/Tunasmelt/Cachify"><img src="assets/recent-1.svg" alt="Cachify: Prompt cache gateway: explains why LLM provider prompt caching missed (byte-exact segment hashing, lineage, first-divergence diff) and, soon, serves safe semantic cache hits" width="100%"/></a>
+<a href="https://github.com/Tunasmelt/Drifter-MCP"><img src="assets/recent-2.svg" alt="Drifter-MCP: A proxy-based regression-testing harness that sits on the MCP connection between your agent and its tools" width="100%"/></a>
+<a href="https://github.com/Tunasmelt/Unstale"><img src="assets/recent-3.svg" alt="Unstale: —" width="100%"/></a>
 <a href="https://github.com/Tunasmelt/TrustWright"><img src="assets/recent-4.svg" alt="TrustWright: Security for Agents" width="100%"/></a>
 <a href="https://github.com/Tunasmelt/Cerebro-2.0"><img src="assets/recent-5.svg" alt="Cerebro-2.0: A personal multimodal knowledge vault — hybrid RAG retrieval, a live brain graph, and a client-side-encrypted sealed tier for sensitive documents." width="100%"/></a>
 <a href="https://github.com/Tunasmelt/Cerebro-Flutter"><img src="assets/recent-6.svg" alt="Cerebro-Flutter: Flutter mobile client for Cerebro, a chat-with-your-documents knowledge base" width="100%"/></a>
