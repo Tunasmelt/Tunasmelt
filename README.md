@@ -55,10 +55,10 @@
 <sub><samp>AUTO-UPDATED DAILY FROM MY MOST RECENTLY PUSHED PUBLIC REPOS</samp></sub>
 
 <!-- recent:start -->
-<a href="https://github.com/Tunasmelt/Noir-Transit"><img src="assets/recent-1.svg" alt="Noir-Transit: First-person psychological horror/mystery, browser-based, no install" width="100%"/></a>
-<a href="https://github.com/Tunasmelt/Testifye"><img src="assets/recent-2.svg" alt="Testifye: —" width="100%"/></a>
-<a href="https://github.com/Tunasmelt/Drifter-MCP"><img src="assets/recent-3.svg" alt="Drifter-MCP: A proxy-based regression-testing harness that sits on the MCP connection between your agent and its tools" width="100%"/></a>
-<a href="https://github.com/Tunasmelt/Dramatis"><img src="assets/recent-4.svg" alt="Dramatis: —" width="100%"/></a>
+<a href="https://github.com/Tunasmelt/Dramatis"><img src="assets/recent-1.svg" alt="Dramatis: —" width="100%"/></a>
+<a href="https://github.com/Tunasmelt/Noir-Transit"><img src="assets/recent-2.svg" alt="Noir-Transit: First-person psychological horror/mystery, browser-based, no install" width="100%"/></a>
+<a href="https://github.com/Tunasmelt/Testifye"><img src="assets/recent-3.svg" alt="Testifye: —" width="100%"/></a>
+<a href="https://github.com/Tunasmelt/Drifter-MCP"><img src="assets/recent-4.svg" alt="Drifter-MCP: A proxy-based regression-testing harness that sits on the MCP connection between your agent and its tools" width="100%"/></a>
 <a href="https://github.com/Tunasmelt/Cachify"><img src="assets/recent-5.svg" alt="Cachify: Prompt cache gateway: explains why LLM provider prompt caching missed (byte-exact segment hashing, lineage, first-divergence diff) and, soon, serves safe semantic cache hits" width="100%"/></a>
 <a href="https://github.com/Tunasmelt/Unstale"><img src="assets/recent-6.svg" alt="Unstale: —" width="100%"/></a>
 <!-- recent:end -->
